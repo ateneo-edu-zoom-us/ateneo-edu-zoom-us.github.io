@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!-- saved from url=(0105)file:///C:/Users/mttal/Google%20Drive/mattalejo.github.io/Launch%20Meeting%20-%20Zoom_files/index(1).html -->
+<html class="js-focus-visible" data-js-focus-visible=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Ada Button</title><style>.button {
+      padding: 0;
+      margin: 0;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+      border: 1px solid rgba(0, 0, 0, .05);
+      /* transition: 120ms ease; */
+      transition: 200ms opacity ease;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      overflow: hidden;
+    }
+
+    .js-focus-visible :focus:not(.focus-visible) {
+      outline: none;
+    }
+
+    .button--appear {
+      opacity: 1
+    }
+
+    .button--hide-icon > :first-child {
+      animation-duration: 2s;
+      animation-name: dialogue-fade;
+    }
+
+    .button__icon {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      padding: 17%;
+      position: absolute;
+      box-sizing: border-box;
+      pointer-events: none;
+    }
+
+    .button__emoji {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10010;
+      width: 100%;
+      height: 100%;
+      animation-duration: 2s;
+      animation-name: emoji-bounce;
+      animation-fill-mode: forwards;
+    }
+
+    .notification {
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-style: solid;
+      border-color: #ff3b30;
+      background-color: #fff;
+      box-sizing: border-box;
+      animation-duration: .5s;
+      animation-name: notification-fade-in;
+    }
+
+    .button-v2 {
+      padding: 0;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 1px solid rgba(0, 0, 0, .05);
+      transition: 200ms opacity ease;
+      position: absolute;
+      right: 24px;
+      bottom: 24px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 12px 48px 4px rgba(0, 0, 0, 0.12);
+    }
+
+    .button--text {
+      border-radius: 42px;
+      min-width: 95px;
+      padding: 0 13px;
+      justify-content: flex-start;
+    }
+
+    .button-v2 .button__icon {
+      position: relative;
+    }
+
+    .button--text .button__icon {
+      height: 22px;
+      width: 22px;
+      padding: 0;
+      top: -1px;
+    }
+
+    .button__text {
+      font-size: 16px;
+      padding-left: 8px;
+      color: inherit;
+      font-weight: 700;
+      line-height: 1.3;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .button--text .notification {
+      top: 36px;
+      left: 18px;
+    }
+
+    @keyframes emoji-bounce {
+      0% {
+        transform: translateY(60px);
+      }
+
+      10% {
+        transform: translateY(0);
+      }
+
+      17% {
+        transform: rotateZ(-12deg);
+        animation-timing-function: ease-in-out;
+      }
+
+      23% {
+        transform: rotateZ(18deg);
+        animation-timing-function: ease-in-out;
+      }
+
+      30% {
+        transform: rotateZ(0deg);
+        animation-timing-function: ease-in-out;
+      }
+
+      80% {
+        transform: translateY(0);
+      }
+
+      90% {
+        transform: translateY(3px);
+      }
+
+      100% {
+        transform: translateY(-60px);
+      }
+    }
+
+    @keyframes dialogue-fade {
+      0% {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+      }
+
+      10% {
+        opacity: 0;
+        transform: scale3d(0, 0, 0);
+      }
+
+      90% {
+        opacity: 0;
+        transform: scale3d(0, 0, 0);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+      }
+    }
+
+    @keyframes notification-fade-in {
+      0% {
+        opacity: 0;
+        transform: scale3d(0, 0, 0);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+      }
+    }</style><script defer="defer" src="./sentry.9eeb9e838d1b619011fb.js.download" integrity="sha256-5Kw22Q7blVS3UW/t73oy/U9iRBHcp/Zx2noiFwOc3Vc= sha384-E4nvG7902sUVmLw3NT30s0l4DPDjUIWCezbkPEdgMii5WGlasux4haJxOQ1ddpFw" crossorigin="anonymous"></script><script defer="defer" src="./preact.6c18df7b70c66204c1e3.js.download" integrity="sha256-Vj5zoQwD/VerZ1p3nIg1//hM7wT9WXCfbGWvInKg9Dw= sha384-DMSQRkxusiQYAV60A9SZ1WL/yB0xi6ke9fJ2eLD5CA64vDFgszy5aU3ujit/2Je4" crossorigin="anonymous"></script><script defer="defer" src="./index.js(2).download" integrity="sha256-bKwMDSNue/UbXT+gFPfHFRc8sruKB9Mnb+1/6/TDkgk= sha384-PKl44PrjSVJDoFK0by81aulZWmsLZZPwk67kI7WnSOuKO8GwnLNcS2pZ77Yc1RLt" crossorigin="anonymous"></script></head><body style="margin: 0;" data-new-gr-c-s-check-loaded="14.1028.0" data-gr-ext-installed=""><button type="button" id="ada-chat-button" class="
+          
+          
+          button-v2
+          button--appear" aria-label="Chat with bot" title="Chat with bot" aria-controls="ada-chat-frame" style="background-color: rgb(14, 114, 237); height: 56px; width: 56px; color: rgb(255, 255, 255);"><img class="button__icon" alt="" src="./7f9364f2-065e-40d7-9e4f-478d3bb606d4.svg"></button><div class="notification" role="alert" style="height: 22px; width: 22px; border-width: 7.744px; display: none; right: 24px; bottom: 63.5px; top: auto !important; left: auto !important;"></div><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></body></html>
